@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 // import lightCat from "../assets/img/4.jpg";
 import darkCat from "../assets/img/2.jpg";
+import { Link } from "expo-router";
 // import darkCat from "../assets/icon.png";
 
 const Home = () => {
@@ -11,6 +12,15 @@ const Home = () => {
       <Text style={styles.title}>The catto</Text>
       <Text style={{ marginTop: 10, marginBottom: 10 }}>is here</Text>
       <Text style={styles.card}>Beware</Text>
+
+      <Link href="/about" style={styles.link}>
+        {" "}
+        About Meow{" "}
+      </Link>
+      <Link href="/contact" style={styles.link}>
+        {" "}
+        Contact Meow{" "}
+      </Link>
     </View>
   );
 };
@@ -41,5 +51,10 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 100,
     borderWidth: 2,
+  },
+  link: {
+    // marginTop: 20,
+    marginVertical: 10,
+    borderBottomWidth: 1,
   },
 });
